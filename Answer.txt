@@ -1,0 +1,31 @@
+package com;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class AutoDropDown {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("WebDriver.edge.Driver","C:\\Selenium\\browser driver\\edgedriver_win64");
+		WebDriver driver=new EdgeDriver();
+	    driver.get("https://www.goibibo.com/flights/?utm_source=google&utm_medium=cpc&utm_campaign=DF-Brand-EM&utm_adgroup=Only%20Goibibo&utm_term=!SEM!DF!G!Brand!RSA!108599293!6504095653!617695092667!e!goibibo!c!&gad_source=1&gclid=EAIaIQobChMI8vDAp-CChwMV5m5_AB3-8Q0BEAAYASAAEgI7uvD_BwE");
+	    driver.manage().window().maximize();
+	    driver.findElement(By.xpath("(//div[@class='sc-12foipm-2 eTBlJr fswFld '])[1]")).click();
+	    driver.findElement(By.xpath("//input[@type='text']")).sendKeys("pune");
+	    driver.findElement(By.xpath("(//span[@class='autoCompleteTitle '])[1]")).click();
+	    
+	    driver.findElement(By.xpath("(//div[@class='sc-12foipm-2 eTBlJr fswFld '])[2]")).click();
+	    driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Lucknow (LKO)");
+	    
+	    
+	    
+	   
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
